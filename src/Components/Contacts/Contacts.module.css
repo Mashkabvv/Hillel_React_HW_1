@@ -1,0 +1,20 @@
+.contacts_head {
+  display: flex;
+  border: 2px solid #d4d49e;
+}
+
+.contacts_title {
+  width: 25%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-right: 2px solid #d4d49e;
+  color: #d4d49e;
+  background:  #1a1746;
+  padding: 10px;
+}
+
+.contacts_title:last-child {
+  border: none;
+}
+
