@@ -1,3 +1,7 @@
+.contacts_wrap {
+  width: 50%;
+}
+
 .contacts_head {
   display: flex;
   border: 2px solid #d4d49e;
@@ -16,5 +20,19 @@
 
 .contacts_title:last-child {
   border: none;
+  width: 10%;
 }
 
+.btn_add {
+  margin-top: 20px;
+  width: 100px;
+  float: right;
+  border: none;
+  outline: none;
+  background: #dc4055;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}

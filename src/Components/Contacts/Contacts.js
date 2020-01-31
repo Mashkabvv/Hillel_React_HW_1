@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import propTypes from '../propTypes';
 
 //Styles
-import Styles from './Contacts.module.css';
+import styles from './Contacts.module.css';
 
 //Components
 import ContactsItem from '../ContactsItem/ContactsItem'
@@ -11,12 +12,13 @@ export default class Contacts extends Component {
   render() {
     
     return (
-      <div className = { Styles.contacts_wrap }>
-        <div className = { Styles.contacts_head }>
-          <div className = { Styles.contacts_title }>Имя</div>
-          <div className = { Styles.contacts_title }>Фамилия</div>
-          <div className = { Styles.contacts_title }>Возраст</div>
-          <div className = { Styles.contacts_title }>Телефон</div>
+      <div className = { styles.contacts_wrap }>
+        <div className = { styles.contacts_head }>
+          <div className = { styles.contacts_title }>Имя</div>
+          <div className = { styles.contacts_title }>Фамилия</div>
+          <div className = { styles.contacts_title }>Возраст</div>
+          <div className = { styles.contacts_title }>Телефон</div>
+          <div className = { styles.contacts_title }>Delete</div>
         </div>
         { 
           this.props.data.map((item) => {
@@ -24,29 +26,20 @@ export default class Contacts extends Component {
               <ContactsItem 
                 item = { item }
                 key = { item.id }
+                onDelete = { this.props.onDelete }
+                moveToForm = { this.props.moveToForm }
               />
             )
               
           })
         }
-
-        {/* { 
-          this.props.data.map(({id, name, surname, age, phone}) => {
-            return (
-              <ContactsItem 
-                key = { id }
-                name = { name }
-                surname = { surname }
-                age = { age }
-                phone = { phone }
-              />
-            )
-              
-          })
-        } */}
-
+        <button className = { styles.btn_add } onClick = { this.props.onDischangeForm }>Add</button>
       </div>
     );
   }
 }
+
+Contacts.propTypes = {
+  data: propTypes.dataType.isRequired
+};
 

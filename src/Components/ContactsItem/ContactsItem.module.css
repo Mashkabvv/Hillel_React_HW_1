@@ -14,5 +14,17 @@
 
 .contacts_title:last-child {
   border: none;
+  width: 10%;
+  text-align: center;
+}
+
+.btn_del {
+  border: none;
+  outline: none;
+  background: #dc4055;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
 }
 
